@@ -115,7 +115,6 @@ _connectSocket01() {
 }
 
 _socketStatus(dynamic data) { 
-	print("Socket status: " + data); 
 }
 
 _subscribes() { 
@@ -125,7 +124,6 @@ _subscribes() {
 }
 
 void _onReceiveChatMessage(dynamic message) { 
-	print("Message from UFO: " + message); 
 }
 
 void _sendChatMessage(String msg) async { 

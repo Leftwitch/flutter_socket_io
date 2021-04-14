@@ -85,19 +85,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _onSocketInfo(dynamic data) {
-    print("Socket info: " + data);
   }
 
   _socketStatus(dynamic data) {
-    print("Socket status: " + data);
   }
 
   _onSocketInfo02(dynamic data) {
-    print("Socket 02 info: " + data);
   }
 
   _socketStatus02(dynamic data) {
-    print("Socket 02 status: " + data);
   }
 
   _subscribes() {
@@ -141,11 +137,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void socketInfo(dynamic message) {
-    print("Socket Info: " + message);
   }
 
   void _onReceiveChatMessage(dynamic message) {
-    print("Message from UFO: " + message);
   }
 
   void _incrementCounter() {

@@ -37,7 +37,6 @@ class SocketIO {
         if (functions != null) {
           SocketIOFunction f = functions.getFunctionByName(callbackFuncName);
           if (f != null && f.function != null) {
-            print("CALLLING FUNCTION: " + f.functionName);
             f.function(arguments);
             return null;
           }

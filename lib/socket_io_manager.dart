@@ -23,13 +23,11 @@ class SocketIOManager {
     //structure of method call: "<socketId>|<event>|<callbackName>"
     if (call.method.contains("|")) {
       dynamic params = _parserMethodCall(call.method);
-      print(params);
       if (params != null && params.length > 2) {
         SocketIO socketIO = _getSocketIO(params[0]);
         if(socketIO != null) {
           socketIO.handlerMethodCall(params[1], params[2], call.arguments);
         } else {
-          print("NOT FOUND SOCKET ${params[0]}");
         }
       }
     }
@@ -59,14 +57,12 @@ class SocketIOManager {
 
   SocketIO createSocketIO(String domain, String namespace, {String query, Function socketStatusCallback}) {
     if(domain == null || domain.isEmpty) {
-      print("DOMAIN IS NULL OR EMPTY!");
       return null;
     }
     String socketId = _getSocketId(domain, namespace);
     SocketIO socketIO = _getSocketIO(socketId);
 
     if(socketIO == null) {
-      print("CREATING NEW SOCKET: $socketId");
       socketIO = new SocketIO(
           _channel,
           domain,
